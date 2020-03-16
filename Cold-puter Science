@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+ 
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        int jumlah=0;
+        int a=scan.nextInt();
+        for (int i=1;i<=a;i++){
+            int b=scan.nextInt();
+            if (b<0){
+                jumlah= jumlah +1 ;
+            
+            }
+        }
+        System.out.println(jumlah);
+    
+    }}

@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+        
+        Scanner scan=new Scanner (System.in);
+    int a=scan.nextInt();
+    int b=scan.nextInt();
+        if (a>0){
+        if (b>=55){
+            System.out.println(a+" "+(b-45));
+        }
+        else if (b>=45){
+            System.out.println(a+" "+(b-45));
+        }
+        else {
+            System.out.println(a-1+ " "+ (b+60-45));
+        }}
+        else{
+         if (b>=55){
+            System.out.println("23 "+(b-45));
+        }
+        else if (b>=45){
+            System.out.println("23 0"+(b-45));
+        }
+        else {
+            System.out.println("23 "+ (b+60-45));
+        
+        }
+        }
+            
+    }}    

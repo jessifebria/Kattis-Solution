@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+       Scanner scan= new Scanner (System.in) ;
+       int a = scan.nextInt();
+       int b = scan.nextInt();
+       
+       if (a<b){
+       for (int i=a+1;i<=b+1;i++){
+           System.out.println(i);
+       }
+       }
+       else if (a>b){
+              for (int j=b+1;j<=a+1;j++){
+               System.out.println(j);
+               }
+               }
+       else {
+               System.out.println(a+1);
+               
+               }
+       
+       }
+       
+        
+        
+        
+} 

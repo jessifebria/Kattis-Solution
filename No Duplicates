@@ -1,0 +1,12 @@
+a= input()
+b=a.split(' ')
+c=1
+
+for i in range(len(b)):
+    if (b.count(b[i])>1):
+        c=0
+        print("no")
+        break
+
+if c==1:
+    print("yes")

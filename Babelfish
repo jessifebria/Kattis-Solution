@@ -1,0 +1,33 @@
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     HashMap <String,String> kunci = new HashMap<>();
+     while (scan.hasNext()==true){
+     String a=scan.nextLine();
+     String b[]=a.split(" ");
+     String d;
+     if (!(a.contains(" "))) {
+         d= kunci.get(a);
+         if (a.isEmpty()) {
+             continue;
+         }
+         if (d==null) {
+             System.out.println("eh");
+         }
+         else{
+             System.out.println(d);
+         }
+     }
+     else {
+         kunci.put(b[1], b[0]);
+     }
+     }
+     
+     
+     
+     
+ }}

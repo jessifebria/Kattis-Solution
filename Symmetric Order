@@ -1,0 +1,64 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   int w=1;
+   while(true){
+   ArrayList<String> aaa=new ArrayList<>();
+   aaa.add(null);
+   int a=scan.nextInt();
+   scan.nextLine();
+   int e=0;
+   
+       if (a==0) {
+           break;
+       }
+       for (int i = 0; i < a; i++) {
+           String b=scan.nextLine();
+           aaa.add(b);
+       }
+       int p=aaa.size();
+       System.out.println("SET " + w);
+       if (p%2==0) {
+           e=1;
+       for (int i = 1; i <= (aaa.size()/2)-1; i++) {
+           System.out.println(aaa.get(e));
+           e+=2;
+       }
+       e--;
+           System.out.println(aaa.get(aaa.size()-1));
+           for (int i = 1; i <= (aaa.size()/2)-1; i++) {
+               System.out.println(aaa.get(e));
+           e-=2;
+           }
+       }
+       else {
+        e=1;
+           System.out.println(aaa.get(e));
+       for (int i = 1; i <= (aaa.size()/2)-1; i++) {
+           e+=2;
+           System.out.println(aaa.get(e));
+       }
+       e++;
+           System.out.println(aaa.get(e));
+           for (int i = 1; i <= (aaa.size()/2)-1; i++) {
+               e-=2;
+               System.out.println(aaa.get(e));
+           
+           }
+       
+       
+       
+       
+       
+       }
+       
+       
+       
+       
+   w++;
+   }
+ }}

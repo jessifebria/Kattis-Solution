@@ -1,0 +1,364 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     String[] a= new String[7];
+     int plus = 0;
+     for (int i = 0; i < 7; i++) {
+         a[i]= scan.nextLine();
+     }
+     String[] l1= a[0].split("(?<=\\G.{6})");
+     String[] l2= a[1].split("(?<=\\G.{6})");
+     String[] l3= a[2].split("(?<=\\G.{6})");
+     String[] l4= a[3].split("(?<=\\G.{6})");
+     String[] l5= a[4].split("(?<=\\G.{6})");
+     String[] l6= a[5].split("(?<=\\G.{6})");
+     String[] l7= a[6].split("(?<=\\G.{6})");
+     ArrayList<Integer> angka = new ArrayList <>();
+     for (int i = 0; i < l1.length; i++) {
+         if (i == (l1.length-1)) {
+          if ((l1[i].equalsIgnoreCase("....x"))&&(l2[i].equalsIgnoreCase("....x"))&&(l3[i].equalsIgnoreCase("....x"))&&(l4[i].equalsIgnoreCase("....x"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("....x")) ){
+             angka.add(1);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("....x"))&&(l3[i].equalsIgnoreCase("....x"))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("x...."))&&(l6[i].equalsIgnoreCase("x...."))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(2);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("....x"))&&(l3[i].equalsIgnoreCase("....x"))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(3);
+         }
+         else if ((l1[i].equalsIgnoreCase("x...x"))&&(l2[i].equalsIgnoreCase("x...x"))&&(l3[i].equalsIgnoreCase("x...x"))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("....x")) ){
+             angka.add(4);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("x...."))&&(l3[i].equalsIgnoreCase("x...."))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(5);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("x...."))&&(l3[i].equalsIgnoreCase("x...."))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("x...x"))&&(l6[i].equalsIgnoreCase("x...x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(6);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("....x"))&&(l3[i].equalsIgnoreCase("....x"))&&(l4[i].equalsIgnoreCase("....x"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("....x")) ){
+             angka.add(7);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("x...x"))&&(l3[i].equalsIgnoreCase("x...x"))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("x...x"))&&(l6[i].equalsIgnoreCase("x...x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(8);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("x...x"))&&(l3[i].equalsIgnoreCase("x...x"))&&(l4[i].equalsIgnoreCase("xxxxx"))&&(l5[i].equalsIgnoreCase("....x"))&&(l6[i].equalsIgnoreCase("....x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(9);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx"))&&(l2[i].equalsIgnoreCase("x...x"))&&(l3[i].equalsIgnoreCase("x...x"))&&(l4[i].equalsIgnoreCase("x...x"))&&(l5[i].equalsIgnoreCase("x...x"))&&(l6[i].equalsIgnoreCase("x...x"))&&(l7[i].equalsIgnoreCase("xxxxx")) ){
+             angka.add(0);
+         }   
+         }
+         else {
+         if ((l1[i].equalsIgnoreCase("....x."))&&(l2[i].equalsIgnoreCase("....x."))&&(l3[i].equalsIgnoreCase("....x."))&&(l4[i].equalsIgnoreCase("....x."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("....x.")) ){
+             angka.add(1);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("....x."))&&(l3[i].equalsIgnoreCase("....x."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("x....."))&&(l6[i].equalsIgnoreCase("x....."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(2);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("....x."))&&(l3[i].equalsIgnoreCase("....x."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(3);
+         }
+         else if ((l1[i].equalsIgnoreCase("x...x."))&&(l2[i].equalsIgnoreCase("x...x."))&&(l3[i].equalsIgnoreCase("x...x."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("....x.")) ){
+             angka.add(4);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("x....."))&&(l3[i].equalsIgnoreCase("x....."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(5);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("x....."))&&(l3[i].equalsIgnoreCase("x....."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("x...x."))&&(l6[i].equalsIgnoreCase("x...x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(6);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("....x."))&&(l3[i].equalsIgnoreCase("....x."))&&(l4[i].equalsIgnoreCase("....x."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("....x.")) ){
+             angka.add(7);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("x...x."))&&(l3[i].equalsIgnoreCase("x...x."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("x...x."))&&(l6[i].equalsIgnoreCase("x...x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(8);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("x...x."))&&(l3[i].equalsIgnoreCase("x...x."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("....x."))&&(l6[i].equalsIgnoreCase("....x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(9);
+         }
+         else if ((l1[i].equalsIgnoreCase("xxxxx."))&&(l2[i].equalsIgnoreCase("x...x."))&&(l3[i].equalsIgnoreCase("x...x."))&&(l4[i].equalsIgnoreCase("x...x."))&&(l5[i].equalsIgnoreCase("x...x."))&&(l6[i].equalsIgnoreCase("x...x."))&&(l7[i].equalsIgnoreCase("xxxxx.")) ){
+             angka.add(0);
+         }
+         else if ((l1[i].equalsIgnoreCase("......"))&&(l2[i].equalsIgnoreCase("..x..."))&&(l3[i].equalsIgnoreCase("..x..."))&&(l4[i].equalsIgnoreCase("xxxxx."))&&(l5[i].equalsIgnoreCase("..x..."))&&(l6[i].equalsIgnoreCase("..x..."))&&(l7[i].equalsIgnoreCase("......")) ){
+             plus = i ;
+         }
+         }
+         }
+     int angka1=0;
+     int angka2=0;
+     int q=plus-1;
+     int w= l1.length - plus - 2;
+     for (int i = 0; i < plus+1; i++) {
+         angka1 += angka.get(i) * Math.pow(10, q);
+         q--;
+     }
+     for (int i = plus; i < angka.size(); i++) {
+         angka2 += angka.get(i) * Math.pow(10, w);
+         w--;
+     }
+     int hasi = angka1 + angka2;
+     String hasil= String.valueOf(hasi);
+     char hasill[]= hasil.toCharArray();
+     
+     for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("xxxxx");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+     for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("x...x");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+     
+     
+     for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("x...x");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+     
+      for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("x...x");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+      for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("x...x");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+     
+      for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("x....");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("x...x");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("x...x");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+     
+     for (int i = 0; i < hasill.length; i++) {
+         if (hasill[i]=='1') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='2') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='3') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='4') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='5') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='6') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='7') {
+             System.out.print("....x");
+         }
+         else if (hasill[i]=='8') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='9') {
+             System.out.print("xxxxx");
+         }
+         else if (hasill[i]=='0') {
+             System.out.print("xxxxx");
+         }
+         if (i!= hasill.length-1) {  
+         System.out.print(".");
+     }
+     }
+     System.out.println("");
+ }}
+

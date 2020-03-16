@@ -1,0 +1,92 @@
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   HashSet<Character> hurufa = new HashSet<>();  
+   HashSet<Character> huruf2 = new HashSet<>();  
+   HashSet<Character> huruf3 = new HashSet<>();  
+   HashSet<Character> huruf4 = new HashSet<>();  
+   HashSet<Character> huruf5 = new HashSet<>();  
+   HashSet<Character> huruf6 = new HashSet<>();  
+   HashSet<Character> huruf7 = new HashSet<>();  
+   HashSet<Character> huruf8 = new HashSet<>();  
+   HashSet<Character> huruf9 = new HashSet<>();  
+   HashSet<Character> huruft = new HashSet<>();  
+   HashSet<Character> hurufj = new HashSet<>();  
+   HashSet<Character> hurufq = new HashSet<>();  
+   HashSet<Character> hurufk = new HashSet<>();  
+  
+   for (int i = 0; i < 5; i++) {
+         String a=scan.next().toUpperCase();
+        if (a.charAt(0)=='A') {
+           hurufa.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='2') {
+           huruf2.add(a.charAt(1));
+       }
+        
+        else if(a.charAt(0)=='3') {
+           huruf3.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='4') {
+           huruf4.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='5') {
+           huruf5.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='6') {
+           huruf6.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='7') {
+           huruf7.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='8') {
+           huruf8.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='9') {
+           huruf9.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='T') {
+           huruft.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='J') {
+           hurufj.add(a.charAt(1));
+       }else if(a.charAt(0)=='Q') {
+           hurufq.add(a.charAt(1));
+       }
+        else if(a.charAt(0)=='K') {
+           hurufk.add(a.charAt(1));
+       }
+                 
+     }
+   
+   int total[]= new int[13];
+   total[0]= hurufa.size() ;
+   total[1]= huruf2.size() ;
+   total[2]= huruf3.size() ;
+   total[3]= huruf4.size() ;
+   total[4]= huruf5.size() ;
+   total[5]= huruf6.size() ;
+   total[6]= huruf7.size() ;
+   total[7]= huruf8.size() ;
+   total[8]= huruf9.size() ;
+   total[9]= huruft.size() ;
+   total[10]= hurufj.size() ;
+   total[11]= hurufq.size() ;
+   total[12]= hurufk.size() ;
+   
+   int terbesar = total[0];
+     for (int i = 1; i < 13; i++) {
+         if (total[i]> terbesar) {
+             terbesar = total[i];
+         }
+     }
+     System.out.println(terbesar );
+    
+     
+   
+ }}

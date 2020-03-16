@@ -1,0 +1,54 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+ int e=1;
+   while(true){
+  ArrayList<String> aaa= new ArrayList<>();
+  ArrayList<String> bbb= new ArrayList<>();
+  ArrayList<Integer> num= new ArrayList<>();
+
+   int a=scan.nextInt();
+   scan.nextLine();
+   if (a==0) {
+          System.exit(0);
+      }
+      for (int i = 0; i < a; i++) {
+          String b=scan.nextLine();
+          String c[]= b.split(" ");
+          if (!(aaa.contains(c[c.length-1].toLowerCase()))) {
+          bbb.add(c[c.length-1].toLowerCase());   
+          }
+          
+          aaa.add(c[c.length-1].toLowerCase());
+      }
+      Collections.sort(aaa);
+      Collections.sort(bbb);
+      for (int i = 0; i < bbb.size(); i++) {
+          int d=0;
+          for (int j = 0; j < aaa.size(); j++) {
+              if (bbb.get(i).equals(aaa.get(j))) {
+                  d++;
+              }
+          }
+          num.add(d);
+      }
+      System.out.println("List "+ e + ":");
+      for (int i = 0; i < bbb.size(); i++) {
+          System.out.println(bbb.get(i) + " | " + num.get(i));
+      }
+      
+      
+  
+  
+  
+      e+=1;
+  
+  }
+   
+ }}

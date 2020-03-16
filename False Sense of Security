@@ -1,0 +1,111 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+       HashMap<String, Character> key = new HashMap<>();
+       HashMap<Character, String> key1 = new HashMap<>();
+      key.put(".-", 'A');
+      key.put("-...", 'B');
+      key.put("-.-.", 'C');
+      key.put("-..", 'D');
+      key.put(".", 'E');
+      key.put("..-.", 'F');
+      key.put("--.", 'G');
+      key.put("....", 'H');
+      key.put("..", 'I');
+      key.put(".---", 'J');
+      key.put("-.-", 'K');
+      key.put(".-..", 'L');
+      key.put("--", 'M');
+      key.put("-.", 'N');
+      key.put("---", 'O');
+      key.put(".--.", 'P');
+      key.put("--.-", 'Q');
+      key.put(".-.", 'R');
+      key.put("...", 'S');
+      key.put("-", 'T');
+      key.put("..-", 'U');
+      key.put("...-", 'V');
+      key.put(".--", 'W');
+      key.put("-..-", 'X');
+      key.put("-.--", 'Y');
+      key.put("--..", 'Z');
+      key.put("..--", '_');
+      key.put(".-.-", ',');
+      key.put("---.", '.');
+      key.put("----", '?');
+      
+      key1.put('A',".-");
+      key1.put('B',"-...");
+      key1.put('C', "-.-.");
+      key1.put('D',"-..");
+      key1.put('E',".");
+      key1.put('F',"..-.");
+      key1.put('G',"--.");
+      key1.put('H',"....");
+      key1.put('I',"..");
+      key1.put('J',".---");
+      key1.put('K',"-.-");
+      key1.put('L',".-..");
+      key1.put('M',"--");
+      key1.put('N',"-.");
+      key1.put('O',"---");
+      key1.put('P',".--.");
+      key1.put('Q',"--.-");
+      key1.put('R',".-.");
+      key1.put('S',"...");
+      key1.put('T',"-");
+      key1.put('U',"..-");
+      key1.put('V',"...-");
+      key1.put('W',".--");
+      key1.put('X',"-..-");
+      key1.put('Y',"-.--");
+      key1.put('Z',"--..");
+      key1.put('_',"..--");
+      key1.put(',',".-.-");
+      key1.put('.',"---.");
+      key1.put('?',"----");
+      
+      while (scan.hasNext()){
+      ArrayList <Integer> aa= new ArrayList<>();
+      String a=scan.nextLine();
+      char b[]= a.toCharArray();
+      String c= key1.get(b[0]);
+      aa.add(c.length());
+      for (int i = 1; i < b.length; i++) {
+              c = c + key1.get(b[i]);
+              aa.add(key1.get(b[i]).length());
+          }
+      int d=0;
+      int o=0;
+          while (true){
+         
+              for (int i = 1; i <= aa.size(); i++) {
+                      d+= aa.get(aa.size()-i);
+                      String p= c.substring(o, d);
+                      o= d ;
+                      System.out.print(key.get(p));
+                      if (d == c.length()) {
+                        System.out.println("");
+                        break;
+                    
+                  }
+                  
+              }
+              break;
+         }
+          
+      
+      
+      }
+      
+       
+       
+    }
+}

@@ -1,0 +1,14 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a=scan.nextInt();
+     double b=scan.nextDouble();
+     
+     double c= a / (Math.sin(Math.toRadians(b)));
+     
+     System.out.printf("%.0f", Math.ceil(c));
+     System.out.println("");
+    }}

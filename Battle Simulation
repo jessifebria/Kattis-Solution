@@ -1,0 +1,67 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+    String a= scan.nextLine();
+    char b[]= a.toCharArray();
+    
+     for (int i = 0; i < b.length; i++) {
+        int q= i+1;
+        int w= i+2;
+         if ((q<b.length) && (w<b.length)) {
+             if ((b[i]=='R')&&(b[q]=='B')&&(b[w]=='L')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if ((b[i]=='R')&&(b[q]=='L')&&(b[w]=='B')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if ((b[i]=='L')&&(b[q]=='R')&&(b[w]=='B')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if ((b[i]=='L')&&(b[q]=='B')&&(b[w]=='R')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if ((b[i]=='B')&&(b[q]=='R')&&(b[w]=='L')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if ((b[i]=='B')&&(b[q]=='L')&&(b[w]=='R')) {
+                 System.out.print("C");
+                 i+=2;
+             }
+             else if (b[i]=='R'){
+                 System.out.print("S");
+             }
+             else if (b[i]=='B'){
+                 System.out.print("K");
+             }
+             else if (b[i]=='L'){
+                 System.out.print("H");
+             }
+             
+         }
+         else {
+             if (b[i]=='R'){
+                 System.out.print("S");
+             }
+             else if (b[i]=='B'){
+                 System.out.print("K");
+             }
+             else if (b[i]=='L'){
+                 System.out.print("H");
+             }
+         }
+         
+         
+         
+        
+     }
+     System.out.println("");
+    
+ }}

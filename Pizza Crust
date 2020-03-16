@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+ Scanner scan= new Scanner (System.in);
+       float a= scan.nextFloat();
+       float b= scan.nextFloat();
+        if ((a==b) || (b==0)) {
+            System.out.println("0.000000000");
+            System.exit(0);
+        }
+       double c= ((a-b)/a)* ((a-b)/a) * 100 ;
+       
+        System.out.printf("%.6f", c);
+       
+        System.out.println("");
+        
+        }
+    }
+   

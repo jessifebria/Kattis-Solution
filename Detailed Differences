@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+    Scanner scan=new Scanner (System.in);
+    int a=scan.nextInt();
+    for (int j=1;j<=a;j++){
+        String b=scan.next();
+        String c=scan.next();
+        String[] d=b.split("");
+        String[] e=c.split("");
+        System.out.println(b);
+        System.out.println(c);
+        for (int i=0;i<d.length;i++){
+            if (d[i].equals(e[i])){
+                System.out.print(".");
+            }
+            else {
+                System.out.print("*");
+            }
+        }
+        System.out.println("");
+        System.out.println("");
+    
+    }
+    
+    }}    

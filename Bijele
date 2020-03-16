@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=scan.nextInt();
+        int d=scan.nextInt();
+        int e=scan.nextInt();
+        int f=scan.nextInt();
+        
+        int g=1-a;
+        int h=1-b;
+        int i=2-c;
+        int j=2-d;
+        int k=2-e;
+        int l=8-f;
+        
+        System.out.println(g+" "+h+" "+i+" "+j+" "+k+" "+l+" ");
+               
+           
+           
+        }
+        
+        
+} 

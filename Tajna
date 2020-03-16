@@ -1,0 +1,84 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     ArrayList<Integer> baris = new ArrayList<>();
+     ArrayList<Integer> baris1 = new ArrayList<>();
+     ArrayList<Integer> kolom = new ArrayList <>();
+     String a= scan.nextLine();
+     int b= a.length();
+     int flag=0;
+     if (b%2==0) {
+         flag=1;
+     }
+     else{
+     for (int i = 2; i <b; i++) {
+         if ((b%i)==0) {
+             flag+=1;
+         }
+     }
+     }
+     
+     int row,col;
+     
+     if (flag>0){
+     
+     for (int i = 0; i <= b; i++) {
+         for (int j = 0; j <= b; j++) {
+             if (i*j==b) {
+                 baris.add(j);
+                 int p= Math.abs(j-i);
+                 baris1.add(p);
+                 kolom.add(i);
+             }
+         }
+     };
+     int terkecil= baris1.get(0);
+     int indeks=0;
+     for (int i = 1; i < baris1.size(); i++) {
+         if (baris1.get(i)<terkecil) {
+             terkecil= baris1.get(i);
+             indeks= i;
+         }
+         
+     }
+     int c= baris.get(indeks);
+     int d= kolom.get(indeks);
+     if (c>d) {
+         row=c;
+         col=d;
+     }
+     else{
+         row=d;
+         col=c;
+     }
+     }
+     
+     else {
+     row=b;
+     col=1;
+     }
+     int x=0;
+     int q=-1;
+     int y=0;
+     char p[]= a.toCharArray();
+     
+     for (int i = 1; i <= p.length; i++) {
+         q++;
+         x = y + (col*q);
+         System.out.print(p[x]);
+         if (x >= b-col) {
+             y++;
+             x=y;
+             q=-1;
+         }
+     }
+     
+     System.out.println("");
+     
+   }
+ }

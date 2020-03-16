@@ -1,0 +1,72 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner (System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c ;  
+        if (b==1){
+        c=0;
+        }
+        else if (b==2){
+        c=31;
+        }
+        else if (b==3){
+        c=59;
+        }
+        else if (b==4){
+        c=90;
+        }
+        else if (b==5){
+        c=120;
+        }
+        else if (b==6){
+        c=151;
+        }
+        else if (b==7){
+        c=181;
+        }
+        else if (b==8){
+        c=212;
+        }
+        else if (b==9){
+        c=243;
+        }
+        else if (b==10){
+        c=273;
+        }
+        else if (b==11){
+        c=304;
+        }
+        else{
+        c=334;
+        }
+        
+        int d= (c+ a)%7;
+        if (d==1){
+            System.out.println("Thursday");
+        }
+        else if (d==2){
+            System.out.println("Friday");
+        }
+        else if (d==3){
+            System.out.println("Saturday");
+        }
+        else if (d==4){
+            System.out.println("Sunday");
+        }
+        else if (d==5){
+            System.out.println("Monday");
+        }
+        else if (d==6){
+            System.out.println("Tuesday");
+        }
+        else {
+            System.out.println("Wednesday");
+        }
+         
+        }
+    }

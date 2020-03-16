@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Kattis {
+ 
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        
+        String a=scan.nextLine();
+        String b[] = a.split ("");
+        System.out.print(b[0]);
+        for (int i=1; i<b.length ; i++){
+            if (b[i].equalsIgnoreCase(b[i-1]))
+            { continue; }{
+                System.out.print(b[i]);
+            }
+        } 
+    
+    
+    }}

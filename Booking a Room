@@ -1,0 +1,29 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+    Scanner scan= new Scanner (System.in);
+     int a=scan.nextInt();
+     int b=scan.nextInt();
+     ArrayList<Integer> aa=new ArrayList <>();
+     if (a==b) {
+         System.out.println("too late");
+         System.exit(0);
+     }
+     for (int i = 0; i < b; i++) {
+         int c=scan.nextInt();
+         aa.add(c);
+     }
+     while (true){
+     int w= (int) ((Math.random()* a ) +1) ;
+         if (!(aa.contains(w))) {
+             System.out.println(w);
+             break;
+         }
+     }
+     
+     
+     
+ }}

@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+ 
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+       int a=scan.nextInt();
+       int b=scan.nextInt();
+       int c=scan.nextInt();
+       int hasil=0;
+       int jumlah=0;
+       for (int i=1;i<=c;i++){
+           int d=scan.nextInt();
+           hasil=hasil+d;
+           if (hasil==b){
+           jumlah= jumlah+1 ;
+           hasil=0;
+           }
+           
+       }
+       if (jumlah>=a){
+           System.out.println("YES");
+       }
+       else{
+           System.out.println("NO");
+       }
+       
+       
+       
+       
+       
+           
+       
+       
+    
+    }}

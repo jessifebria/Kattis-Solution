@@ -1,0 +1,21 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+    Scanner scan= new Scanner (System.in);
+    int a= scan.nextInt();
+     for (int i = 0; i < a; i++) {
+         int b=scan.nextInt();
+         int w=0;
+         for (int j = 1; j <= b; j++) {
+          w+= Math.pow(2, j-1);
+         
+         }
+         System.out.println(w);
+     }
+     
+     
+     
+ }}

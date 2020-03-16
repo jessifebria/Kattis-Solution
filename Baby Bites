@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+
+     
+     int a=scan.nextInt();
+     scan.nextLine();
+     String b= scan.nextLine();
+     String c[]= b.split(" ");
+     int d;
+     for (int i = 0; i < c.length; i++) {
+        String w = Integer.toString(i+1);
+        
+         if ((!(c[i].equalsIgnoreCase(w))) && (!(c[i].equalsIgnoreCase("mumble")))) {
+             System.out.println("something is fishy");
+             System.exit(0);
+         }   
+     }
+     if (c.length == a) {
+         System.out.println("makes sense");
+     
+     }
+             
+     
+     
+    
+    
+    
+            
+ }}
+

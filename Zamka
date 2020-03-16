@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+    Scanner scan=new Scanner (System.in);
+    int l=scan.nextInt();
+    int d=scan.nextInt();
+    int x=scan.nextInt();
+    
+    int maks=0;
+    int min=0;
+   
+    for (int i=l;i<=d;i++){
+        int sum=0;
+        int k=i;
+        while (k>0){
+            sum= sum+ k%10;
+            k= k/10;
+        }
+        if (sum==x){
+            maks = i;
+        }
+    }
+    
+    
+    for (int i=d;i>=l;i--){
+        int sum=0;
+        int k=i;
+        while (k>0){
+            sum= sum+ k%10;
+            k= k/10;
+        }
+        if (sum==x){
+            min = i;
+        }
+    }
+    System.out.println(min);
+    System.out.println(maks);
+  
+    
+    
+            
+    }}    

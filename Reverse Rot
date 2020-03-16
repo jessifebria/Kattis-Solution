@@ -1,0 +1,19 @@
+key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
+
+
+while(1):
+    txt=""
+    b=input()
+    if(len(b)==0):
+        continue;
+    if (b=='0'):
+        break
+    else:
+        c=b.split(' ')
+        a=int(c[0])
+        y=c[1][::-1]
+        for i in range(len(y)):
+            d= key.rindex(y[i])
+            e=(d+a)%28
+            txt = txt + key[e]
+        print(txt)      

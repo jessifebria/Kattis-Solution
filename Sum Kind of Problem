@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+        int a=scan.nextInt();
+        scan.nextLine();
+        for (int i = 1; i <= a; i++) {
+         int s1=0;
+         int counts1=0;
+         int finals1=0;
+         int finals2=0;
+         int finals3=0;
+         int s2=0;
+         int counts2=0;
+         int s3=0;
+         int counts3=0;
+         int c=scan.nextInt();
+         int b=scan.nextInt();
+         if (b==0) {
+             System.out.println(i + " 0 0 0" );
+         }
+         else {
+             int kuadrat = b*b;
+             System.out.print(c + " "+((kuadrat+b)/2)+" "+ (kuadrat) + " "+(kuadrat+b));
+             System.out.println("");
+         }
+     
+   
+   
+ }}}

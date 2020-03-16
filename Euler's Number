@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+       int a=scan.nextInt();
+       double faktorial ;
+       double nilai=0;
+       if (a==0){
+           System.out.println("1");
+       }
+       else {
+       for (int i = 2; i <= a; i++) {
+           faktorial=1;
+           for (int j = 1; j <= i; j++) {
+               faktorial = j*faktorial ;
+           }
+           nilai+= (1/faktorial);
+     }
+     System.out.printf("%.12f" ,2+nilai);
+     System.out.println("");
+       }
+    }
+    }

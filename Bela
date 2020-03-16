@@ -1,0 +1,77 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+
+    public static void main(String[] args) {
+        
+        Scanner scan=new Scanner (System.in);
+    int a=scan.nextInt();
+    String b=scan.nextLine();
+    String w[]=b.split("");
+    int nilai=0;
+    int jumlah=0;
+     for (int j=1;j<=4*a;j++){
+         String c=scan.nextLine();
+         String e[]=c.split("");
+         char d[]=c.toCharArray();
+         if (e[1].equalsIgnoreCase(w[1])){
+         if (d[0]=='A'){
+             nilai=11;
+         }
+         else if (d[0]=='K'){
+             nilai=4;
+         }
+         else if (d[0]=='Q'){
+             nilai=3;
+         }
+         else if (d[0]=='J'){
+             nilai=20;
+         }
+         else if (d[0]=='T'){
+             nilai=10;
+         }
+         else if (d[0]=='9'){
+             nilai=14;
+         }
+         else if (d[0]=='8'){
+             nilai=0;
+         }
+         else if (d[0]=='7'){
+             nilai=0;
+         }
+         }
+         else {
+             
+          if (d[0]=='A'){
+             nilai=11;
+         }
+         else if (d[0]=='K'){
+             nilai=4;
+         }
+         else if (d[0]=='Q'){
+             nilai=3;
+         }
+         else if (d[0]=='J'){
+             nilai=2;
+         }
+         else if (d[0]=='T'){
+             nilai=10;
+         }
+         else if (d[0]=='9'){
+             nilai=0;
+         }
+         else if (d[0]=='8'){
+             nilai=0;
+         }
+         else if (d[0]=='7'){
+             nilai=0;
+         }
+         }
+         
+          jumlah = jumlah+ nilai;
+}
+        System.out.println(jumlah);
+    }
+    
+}

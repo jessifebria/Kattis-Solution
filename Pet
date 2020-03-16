@@ -1,0 +1,36 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Scanner;
+
+public class JavaApplication18 {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in);
+        ArrayList<Integer> angka= new ArrayList<>();
+        ArrayList<Integer> angka1= new ArrayList<>();
+        int aa=0;
+        for (int i = 0; i < 5; i++) {
+         aa=0;   
+        
+        for (int j = 0; j < 4; j++) {
+            int a=scan.nextInt();
+            aa+=a ;
+        }
+        angka.add(aa);
+        angka1.add(aa);
+        
+        }
+        Collections.sort(angka);
+        for (int i = 0; i < angka.size(); i++) {
+            if ((angka1.get(i))==angka.get(4)) {
+                System.out.println((i+1) + " " + angka.get(4));
+                System.exit(0);
+            }
+        }
+        
+        
+    }
+    
+}

@@ -1,0 +1,14 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        int a= scan.nextInt();
+        int b= scan.nextInt();
+        double d= (a*(b-0.99));
+        System.out.printf("%.0f" ,Math.ceil(d));
+        System.out.println("");
+    }
+} 

@@ -1,0 +1,98 @@
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a[]= new int[6];
+     a[0]= scan.nextInt();
+     a[1]= scan.nextInt();
+     a[2]= scan.nextInt();
+     a[3]= scan.nextInt();
+     a[4]= scan.nextInt();
+     a[5]= scan.nextInt();
+     int h1=scan.nextInt();
+     int h2=scan.nextInt();
+     
+     int satu[]= new int[3];
+     int dua[]= new int[3];
+     
+     ArrayList aa= new ArrayList<Integer>();
+     
+     for (int i = 0; i < a.length; i++) {
+     aa.add(a[i]);
+     }
+     
+     int q=0;
+     for (int i = 0; i < a.length; i++) {
+         for (int j = 0; j < a.length; j++) {
+             for (int k = 0; k < a.length; k++) {
+                 if ((a[i]+a[j]+a[k] == h1 ) && a[i]!=a[j] && a[i]!=a[k] && a[j]!=a[k] ){
+                     satu[0]=a[i];
+                     satu[1]=a[j];
+                     satu[2]=a[k];
+                     
+                }
+             }
+         }
+     }
+     
+    
+     aa.remove(new Integer(satu[0]));
+     aa.remove(new Integer(satu[1]));
+     aa.remove(new Integer(satu[2]));
+    
+     dua[0]=(int) aa.get(0);
+     dua[1]=(int) aa.get(1);
+     dua[2]=(int) aa.get(2);
+     
+     if ((satu[0]>satu[1]) && (satu[1]> satu[2]))  {
+         System.out.print ( satu[0] +" " + satu[1]+ " "+satu[2] + " ");
+     }
+     else if ((satu[0]>satu[2]) && (satu[2]> satu[1]))  {
+         System.out.print ( satu[0] +" " + satu[2]+ " "+satu[1] + " ");
+     }
+     else if ((satu[1]>satu[2]) && (satu[2]> satu[0]))  {
+         System.out.print ( satu[1] +" " + satu[2]+ " "+satu[0] + " ");
+     }
+     else if ((satu[1]>satu[0]) && (satu[0]> satu[2]))  {
+         System.out.print ( satu[1] +" " + satu[0]+ " "+satu[2] + " ");
+     }
+     else if ((satu[2]>satu[1]) && (satu[1]> satu[0]))  {
+         System.out.print ( satu[2] +" " + satu[1]+ " "+satu[0] + " ");
+     }
+     else if ((satu[2]>satu[0]) && (satu[0]> satu[1]))  {
+         System.out.print ( satu[2] +" " + satu[0]+ " "+satu[1] + " ");
+     }
+     
+     if ((dua[0]>dua[1]) && (dua[1]> dua[2])) {
+         System.out.print(dua[0] +" " + dua[1]+" "+dua[2]);
+         System.out.println("");
+     }
+     else if ((dua[0]>dua[2]) && (dua[2]> dua[1])) {
+         System.out.print(dua[0] +" " + dua[2]+" "+dua[1]);
+         System.out.println("");
+     }
+     else if ((dua[1]>dua[2]) && (dua[2]> dua[0])) {
+         System.out.print(dua[1] +" " + dua[2]+" "+dua[0]);
+         System.out.println("");
+     }
+     else if ((dua[1]>dua[0]) && (dua[0]> dua[2])) {
+         System.out.print(dua[1] +" " + dua[0]+" "+dua[2]);
+         System.out.println("");
+     }
+     else if ((dua[2]>dua[1]) && (dua[1]> dua[0])) {
+         System.out.print(dua[2] +" " + dua[1]+" "+dua[0]);
+         System.out.println("");
+     }
+     else if ((dua[2]>dua[0]) && (dua[0]> dua[1])) {
+         System.out.print(dua[2] +" " + dua[0]+" "+dua[1]);
+         System.out.println("");
+     }
+     
+     
+     
+ }}
+

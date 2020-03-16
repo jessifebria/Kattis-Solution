@@ -1,0 +1,40 @@
+
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int a= scan.nextInt();
+        int b= scan.nextInt();
+        int c= scan.nextInt();
+        int bb=0, cc=0 ;
+        while(true){
+            
+            for (int i = 4; ; i++) {
+                bb += i ;
+                if (i - a >= 3) {
+                    cc += i -a;
+                }
+                
+                if (bb+cc == b +c ) {
+                    System.out.println(b-bb);
+                    System.exit(0);
+                }
+                
+                
+                
+            }
+        
+        
+        
+        
+        
+        
+        }
+        
+        
+        
+    }
+    }
+   

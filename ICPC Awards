@@ -1,0 +1,21 @@
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class JavaApplication11 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        scan.nextLine();
+        int jumlah = 0;
+        HashSet<String> aa = new HashSet<>();
+        for (int i = 0; i < a; i++) {
+            String line = scan.nextLine();
+            if (aa.add(line.split(" ")[0]) && ++jumlah <=12) {
+                System.out.println(line);
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        
+        int a=scan.nextInt();
+        int d=scan.nextInt();
+        int b=scan.nextInt();
+        int e=scan.nextInt();
+        int c=scan.nextInt();
+        int f=scan.nextInt();
+        int x,y;
+        if (a==b)  {
+         x= c; 
+        }
+        else if (a==c)  {
+            x = b ;
+        }
+        else {
+             x= a ;
+        }
+        
+        if (d==e)  {
+           y=f ;
+        }
+        else if (d==f)  {
+           y= e;
+        }
+        else {
+           y=d;
+        }
+        
+        System.out.println(x+" "+y);
+        
+        
+        
+    }
+} 

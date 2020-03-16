@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        double a= scan.nextDouble();
+        double b= scan.nextDouble();
+        double hasil=0;
+        for (int i=1;i<=b;i++){
+            double c= scan.nextDouble();
+            double d= scan.nextDouble();
+            hasil = (c*d*a) + hasil ;
+        }
+        System.out.printf("%.6f" , hasil);
+        System.out.println("");
+        
+    }
+} 

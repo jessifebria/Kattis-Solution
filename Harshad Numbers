@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+ Scanner scan= new Scanner (System.in);
+       int a= scan.nextInt();
+       int b;
+       int c;
+       int jum;
+       
+       while (true ){
+       c=a;
+       jum=0;
+       
+       while (a>0) {
+           b = a%10 ;
+           a = a/10;
+           jum += b;
+       }
+       
+        if (c%jum==0) {
+            System.out.println(c);
+            System.exit(0);
+        }
+        c+=1;
+        a=c ;
+       }
+       
+        
+        }
+    }
+   
+

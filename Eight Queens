@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+public class JavaApplication11 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        char[][] var = new char[8][8];
+        String[] line = new String[8];
+        for (int i = 0; i < 8; i++) {
+            line[i] = scan.nextLine();
+        }
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                var[i][j] = line[i].charAt(j);
+            }
+        }
+        int jumlah = 0;
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (var[i][j] == '*') {
+                    jumlah++;
+                    for (int k = 0; k < 8; k++) {
+                        if (k == i) {
+                            break;
+                        } else if (var[k][j] == '*') {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+                    for (int k = 0; k < 8; k++) {
+                        if (k == j) {
+                            break;
+                        } else if (var[i][k] == '*') {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+                    for (int k = 1; k < 8; k++) {
+                        int a = i - k;
+                        int b = j - k;
+                        if ((a >= 0) && (b >= 0) && (var[a][b] == '*')) {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+                    for (int k = 1; k < 8; k++) {
+                        int c = i + k;
+                        int d = j + k;
+                        if ((c <= 7) && (d <= 7) && (var[c][d] == '*')) {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+                    for (int k = 1; k < 8; k++) {
+                        int e = i - k;
+                        int f = j + k;
+                        if ((e >= 0) && (f >= 0) && (e <= 7) && (f <= 7) && (var[e][f] == '*')) {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+
+                    for (int k = 1; k < 8; k++) {
+                        int g = i + k;
+                        int h = j - k;
+                        if ((g >= 0) && (h >= 0) && (g <= 7) && (h <= 7) && (var[g][h] == '*')) {
+                            System.out.println("invalid");
+                            System.exit(0);
+                        }
+                    }
+                }
+            }
+        }
+        if (jumlah != 8) {
+            System.out.println("invalid");
+        } else {
+            System.out.println("valid");
+        }
+
+    }
+
+}

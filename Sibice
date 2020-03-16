@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+
+public class Kattis {
+ 
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+       int a=scan.nextInt();
+       int b=scan.nextInt();
+       int c=scan.nextInt();
+       int e=b*b+c*c;
+       double d= Math.sqrt(e);
+       for (int i=1; i<=a;i++){
+       int f=scan.nextInt();
+       if (f<=d){
+           System.out.println("DA");
+       }
+       else {
+           System.out.println("NE");
+       }
+       
+           
+       
+       }
+    
+    }}

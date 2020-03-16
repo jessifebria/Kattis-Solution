@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+    int a=scan.nextInt();
+    int b=scan.nextInt();
+    int c=0;
+    int d=0;
+    int e=2;
+    int f=2;
+    while (a>0){
+        c+= (a%10) * Math.pow(10, e);
+                a= a/10;
+                e-=1;
+               
+                }
+    
+    while (b>0){
+        d+= (b%10) * Math.pow(10, f);
+                b= b/10;
+                f-=1;
+               
+                }
+     if (c>d) {
+         System.out.println(c);
+     }
+     else{
+         System.out.println(d);
+     }
+ }}

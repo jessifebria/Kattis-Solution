@@ -1,0 +1,40 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a=scan.nextInt();
+     int c[]= new int[a];
+     ArrayList<Integer> aa= new ArrayList<>();
+     ArrayList<Integer> bb= new ArrayList<>();
+     for (int i = 0; i < a; i++) {
+         int b= scan.nextInt();
+         c[i]= b;
+         aa.add(b);
+     }
+     
+     for (int i = 0; i < aa.size(); i++) {
+         int qq= Collections.frequency(aa,aa.get(i));
+         if (qq==1) {
+             bb.add(aa.get(i));
+         }
+     }
+     Collections.sort(bb);
+     
+     for (int i = 0; i < c.length; i++) {
+         if (bb.size()>0)
+         {
+             if (c[i]==(bb.get(bb.size()-1))) {
+             System.out.println((i+1)); 
+             System.exit(0);
+         }
+         
+     }}
+     System.out.println("none");
+     
+    
+     
+ }}

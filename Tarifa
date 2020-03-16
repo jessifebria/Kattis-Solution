@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{       int a,b,c ;
+        scanf("%d", &a);
+        scanf("%d", &b);
+        int d= 0;
+        for (int i=1 ; i<=b ; i++){
+            scanf("%d", &c);
+            d = d +  a-c ;
+        }
+       printf("%d", (d+a));
+
+
+
+    return 0;
+}

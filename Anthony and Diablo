@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     float a= scan.nextFloat();
+     float b= scan.nextFloat();
+     
+     float r = (float) ((b/ Math.PI)/2) ;
+     float c= (float) (Math.PI * Math.pow(r, 2));
+     
+     
+     if ( c >= a) {
+         System.out.println("Diablo is happy!");
+     }
+     else{
+         System.out.println("Need more materials!");
+     }
+     
+    
+    
+    
+            
+ }}

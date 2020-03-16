@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+  int a=scan.nextInt();
+  scan.nextLine();
+     for (int i = 0; i < a; i++) {
+         String b=scan.nextLine();
+         char c[]=b.toCharArray();
+         int d[]= new int[c.length];
+         ArrayList<Integer> angka= new ArrayList<>();
+         for (int j = 0; j < c.length; j++) {
+             d[j]= Character.getNumericValue(c[j]);
+         }
+         String e= "0";
+         String w = null;
+         for (int j = 0; j < c.length; j++) {
+             e = e + c[j];
+             int r=0;
+             int q= Integer.valueOf(e);
+             w=Integer.toBinaryString(q);
+             char p[]=w.toCharArray();
+             for (int k = 0; k < p.length; k++) {
+                 if (p[k]=='1') {
+                     r+=1;
+                 }
+             }
+             angka.add(r);
+         }
+         Collections.sort(angka);
+         System.out.println(angka.get(angka.size()-1));
+     }
+ }}

@@ -1,0 +1,23 @@
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a= scan.nextInt();
+     HashSet q= new HashSet<>();
+     for (int i = 1; i <= a; i++) {
+         int b= scan.nextInt();
+         for (int j = 1; j <= b+1; j++) {
+             String e= scan.nextLine();
+             q.add(e);
+         }
+         System.out.println(q.size() -1);
+         q.clear();
+     }
+     
+     
+   
+     
+    }}

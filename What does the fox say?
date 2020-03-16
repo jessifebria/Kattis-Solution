@@ -1,0 +1,41 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   int a= scan.nextInt();
+   scan.nextLine();
+     for (int i = 0; i < a; i++) {
+         String b=scan.nextLine();
+         ArrayList<String> kata= new ArrayList<>();
+         
+         ArrayList<String> kata1= new ArrayList<>();
+         String c[]= b.split(" ");
+         for (int j = 0; j < c.length; j++) {
+             kata.add(c[j]);
+         } 
+         
+         
+         while (true){
+             String d=scan.nextLine();
+             if (d.equalsIgnoreCase("what does the fox say?")) {
+                 break;
+             }
+         String e[]=d.split(" ");
+         kata1.add(e[2]);
+        }
+          kata.removeAll(kata1);
+         
+         for (int j = 0; j < kata.size(); j++) {
+             System.out.print(kata.get(j) );
+             if (j!=kata.size()-1) {
+                 System.out.print(" ");
+             }
+         }
+         System.out.println("");
+     }
+     
+    
+ }}

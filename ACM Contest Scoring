@@ -1,0 +1,44 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        int jumlah = 0;
+        int huruf;
+        int akhir=0;
+        int benar=0;
+        ArrayList<String> salah= new ArrayList<>();
+        do{
+          jumlah=0;
+        int a=scan.nextInt();
+        if (a==-1){
+        break;
+        }
+        if (a!=-1){
+        String b=scan.next();
+        String c=scan.next();
+        
+        if (c.equalsIgnoreCase("wrong")){
+            salah.add(b);
+        }
+        
+        else if (c.equalsIgnoreCase("right")){
+            huruf=0;
+            for (int i = 0; i < salah.size(); i++) {
+                if (b.equalsIgnoreCase(salah.get(i))){
+                    huruf+=1;
+                }
+            }
+            jumlah = a + (20*huruf);
+            benar+=1;
+        }
+        akhir+=jumlah ;
+            
+        
+        }}while (true);
+       System.out.println(benar + " " + akhir);
+    
+    }
+    }

@@ -1,0 +1,77 @@
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   int a=scan.nextInt();
+   int b=scan.nextInt();
+   int c=scan.nextInt();
+   int d=scan.nextInt();
+     
+     for (int i = 0; i < 3; i++) {
+         int berisik1= 0;
+         int berisik2= 0;
+         int tenang1= 0;
+         int tenang2= 0;
+         int count1= 1;
+         int count2= 1;
+         int time1=0;
+         int time2=0;
+         int akhir =0;
+         int e=scan.nextInt();
+         
+         while (true) {
+             if (count1%2 == 1) {
+                 time1 += a;
+                 if (time1>=e) {
+                     akhir++;
+                     break;
+                 }
+             }
+             else {
+                time1 +=b; 
+                if (time1>=e) {
+                     break;
+                 }
+             }
+         
+         count1++;
+         }
+         
+         while (true) {
+             if (count2%2 == 1) {
+                 time2 += c;
+                 if (time2>=e) {
+                     akhir++;
+                     break;
+                 }
+             }
+             else {
+                time2 += d; 
+                if (time2>=e) {
+                     break;
+                 }
+             }
+         
+         count2++;
+         }
+         
+         
+         
+         if (akhir==2) {
+             System.out.println("both");
+         }
+         else if (akhir==1){
+             System.out.println("one");
+         }
+         else{
+             System.out.println("none");
+         }
+         
+     }
+   
+   
+ }}

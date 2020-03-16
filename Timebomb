@@ -1,0 +1,143 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args) {
+     Scanner scan=new Scanner (System.in);
+     String line1= scan.nextLine();
+     String line2= scan.nextLine();
+     String line3= scan.nextLine();
+     String line4= scan.nextLine();
+     String line5= scan.nextLine();
+     
+     String a[] =line1.split("(?<=\\G.{4})");
+     String b[] =line2.split("(?<=\\G.{4})");
+     String c[] =line3.split("(?<=\\G.{4})");
+     String d[] =line4.split("(?<=\\G.{4})");
+     String e[] =line5.split("(?<=\\G.{4})");
+     
+     int[] x= new int[a.length];
+     
+     for (int i = 0; i < a.length; i++) {
+         if (i == a.length-1){
+          if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("* *"))& (c[i].equalsIgnoreCase("* *")) & (d[i].equalsIgnoreCase("* *")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=0;
+         }
+         else if ((a[i].equalsIgnoreCase("  *")) & (b[i].equalsIgnoreCase("  *"))& (c[i].equalsIgnoreCase("  *")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("  *")))
+         {
+             x[i]=1;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("  *"))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("*  ")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=2;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("  *"))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=3;
+         }
+         else if ((a[i].equalsIgnoreCase("* *")) & (b[i].equalsIgnoreCase("* *"))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("  *")))
+         {
+             x[i]=4;
+         }
+        else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("*  "))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=5;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("*  "))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("* *")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=6;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("  *"))& (c[i].equalsIgnoreCase("  *")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("  *")))
+         {
+            x[i]=7;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("* *"))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("* *")) &(e[i].equalsIgnoreCase("***")))
+         {
+             x[i]=8;
+         }
+         else if ((a[i].equalsIgnoreCase("***")) & (b[i].equalsIgnoreCase("* *"))& (c[i].equalsIgnoreCase("***")) & (d[i].equalsIgnoreCase("  *")) &(e[i].equalsIgnoreCase("***")))
+         {
+            x[i]=9;
+         }
+         else{
+             System.out.println("BOOM!!");
+             System.exit(0);
+         }
+         }
+         else {
+         if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("* * "))& (c[i].equalsIgnoreCase("* * ")) & (d[i].equalsIgnoreCase("* * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=0;
+         }
+         else if ((a[i].equalsIgnoreCase("  * ")) & (b[i].equalsIgnoreCase("  * "))& (c[i].equalsIgnoreCase("  * ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("  * ")))
+         {
+             x[i]=1;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("  * "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("*   ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=2;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("  * "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=3;
+         }
+         else if ((a[i].equalsIgnoreCase("* * ")) & (b[i].equalsIgnoreCase("* * "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("  * ")))
+         {
+             x[i]=4;
+         }
+        else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("*   "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=5;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("*   "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("* * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=6;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("  * "))& (c[i].equalsIgnoreCase("  * ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("  * ")))
+         {
+             x[i]=7;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("* * "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("* * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=8;
+         }
+         else if ((a[i].equalsIgnoreCase("*** ")) & (b[i].equalsIgnoreCase("* * "))& (c[i].equalsIgnoreCase("*** ")) & (d[i].equalsIgnoreCase("  * ")) &(e[i].equalsIgnoreCase("*** ")))
+         {
+             x[i]=9;
+         }
+         else{
+             System.out.println("BOOM!!");
+             System.exit(0);
+         }}
+         
+     }
+     int satuan=0;
+     int nilai;
+     int bil=0;
+     for (int i = 1; i <= a.length; i++) {
+         if (i==1){
+         satuan = i ;
+         }
+         
+         else {
+         satuan = satuan * 10;
+         }
+         nilai= satuan * x[a.length-i];
+         bil += nilai;
+         
+     }
+     
+     if (bil%6==0) {
+         System.out.println("BEER!!");
+     }
+     else {
+         System.out.println("BOOM!!");
+     }
+     
+     
+     
+     
+     
+    }
+    }

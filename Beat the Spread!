@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a=scan.nextInt();
+     for (int i = 0; i < a; i++) {
+         int b= scan.nextInt();
+         int c= scan.nextInt();
+         int aa=(b+c)/2;
+         int bb = b-aa;
+         if ((aa>=0)&& (bb>=0) &&(aa+bb==b) && (aa-bb)==c){
+             System.out.println( aa+ " " + bb );
+         }
+         else  {
+             System.out.println("impossible");
+         }
+         
+     }
+     
+     
+ }}
+

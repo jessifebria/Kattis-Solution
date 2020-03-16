@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        int c ;
+        int i=0;
+        int a= scan.nextInt();
+        if (a<=1){
+            System.out.println("1");
+        }
+        else {
+           int b=1 ;
+           while (a>b){     
+               i=1+i;
+               b = 2*b ;
+           }
+           System.out.println( i+1);
+           }
+           
+               
+           
+           
+        }
+        
+        
+}

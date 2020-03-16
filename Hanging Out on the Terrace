@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+ Scanner scan= new Scanner (System.in);
+        int a= scan.nextInt();
+        int b= scan.nextInt();
+        int jumlah =0;
+        int s=0;
+        for (int i = 1; i <= b; i++) {
+            String c= scan.next();
+            int d= scan.nextInt();
+            if (c.equalsIgnoreCase("enter")) {
+                jumlah+=d ;
+                if (jumlah>a) {
+                    s+=1;
+                    jumlah-=d;
+                }
+ 
+            }
+           
+            else if (c.equalsIgnoreCase("leave")){
+                jumlah -= d ;
+                
+            }   
+        }
+        System.out.println(s);
+        
+        
+        }
+    }
+   
+

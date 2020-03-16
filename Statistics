@@ -1,0 +1,26 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Kattistry {
+    private static Object NumberUtils;
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   int b=1;
+   while(scan.hasNextInt()){
+       ArrayList<Integer> num = new ArrayList<>();
+       int a=scan.nextInt();
+       for (int i = 0; i < a; i++) {
+           int e=scan.nextInt();
+           num.add(e);
+       }
+       Collections.sort(num);
+       System.out.print("Case " + b+": ");
+       int q=num.get(0);
+       int w=num.get(num.size()-1);
+       int r= Math.abs(q-w);
+       System.out.println(q +" " + w + " " + r);
+       b++;
+   }
+ }}

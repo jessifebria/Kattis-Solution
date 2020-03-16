@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Kattis {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner (System.in) ;
+        String a= scan.nextLine();
+        String kata[]= a.split("-");
+        
+        for (int i=0;i<kata.length ; i++){
+            System.out.print(kata[i].charAt(0));
+        }
+        System.out.println("");
+    }
+} 

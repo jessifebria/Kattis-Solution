@@ -1,0 +1,44 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+     Scanner scan= new Scanner (System.in);
+     int a= scan.nextInt();
+     scan.nextLine();
+     for (int i = 1; i <= a; i++) {
+         String d=scan.nextLine();
+         ArrayList aa= new ArrayList<Character>();
+         for (int j = 0; j < d.length(); j++) {
+             if (d.charAt(j)==',') {
+                 aa.add(d.charAt(j));
+                 aa.add("0");
+             }
+             else{
+                 aa.add(d.charAt(j));
+             }
+         }
+         String b=  Character.toString('0') ;
+         for (int j = 0; j < aa.size(); j++) {
+             b = b + aa.get(j);
+         }
+         
+         
+         String bb[]=b.split(",");
+         int c[]= new int[bb.length];
+         for (int j = 0; j < bb.length; j++) {
+             c[j]= Integer.parseInt(bb[j]);
+             
+         }
+         long hasil=0;
+         int q=0;
+         for (int j =bb.length-1; j >=0 ; j--) {
+             hasil += c[j]* Math.pow(60, q);
+               q++;
+         }
+         System.out.println(hasil);
+         
+     }
+             
+ }}

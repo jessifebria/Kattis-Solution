@@ -1,0 +1,55 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Kattistry {
+ public static void main(String[] args)  {
+   Scanner scan= new Scanner (System.in);
+   ArrayList<Integer> angka = new ArrayList();
+    angka.add(0);
+    double hasil=0;
+     for (int i = 0; i < 9; i++) {
+         int a=scan.nextInt();
+         angka.add(a);
+     }
+    
+     for (int i = 2; i <= 9; i++) {
+         int b= angka.indexOf(i-1);
+         int c= angka.indexOf(i);
+             int d= b%3 ;
+             int e= c%3 ;
+             if (d==0) {
+                 d= 3 ;
+             }
+             if (e==0) {
+                 e= 3 ;
+             }
+             
+             int f= b/3;
+             int g = c/3;
+             if (b%3==0) {
+                 f--;
+             }
+             if (c%3==0) {
+                 g--;
+             }
+         if (d == e ) {
+             hasil += Math.abs(g - f);
+         }
+         else if (g == f) {
+             hasil += Math.abs(d - e);
+         }
+         else {
+             int lurus = (d - e) * (d - e);
+             int tinggi = (f - g) * (f - g);
+             hasil += Math.sqrt(lurus+tinggi);
+         }
+         
+     
+     }
+    
+    
+     System.out.println( hasil);
+    
+   
+ }}

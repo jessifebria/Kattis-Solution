@@ -1,0 +1,17 @@
+a=input()
+c=[]
+z=0
+for i in range(len(a)):
+    c.append(a[i])
+    
+for s in range(len(c)):
+    i= len(c)-s -1   
+    if (c[i]=='<'):
+        c[i]=' '
+        z+=1
+    elif (z>0):
+        c[i]=' '
+        z-=1
+
+listToStr = ' '.join(map(str, c)) 
+print(listToStr.replace(' ',''))

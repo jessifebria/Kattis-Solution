@@ -1,0 +1,8 @@
+a=input()
+w=a.count("W")
+b=a.count("B")
+
+if (w==b):
+    print("1")
+else:
+    print("0")

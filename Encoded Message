@@ -1,0 +1,21 @@
+import math
+
+def itung(b):
+    c=" "+b
+    size=int(math.sqrt(len(b)))
+    for i in range(1,size+1):
+        o=size-i+1
+        d=0
+        for j in range(1,size+1):
+            print(c[o+(size*d)],end='')
+            d+=1    
+    print()
+    
+e=[]
+a= int(input())
+for i in range(a):
+    b=input()
+    e.append(b)
+
+for i in range(a):
+    itung(e[i])
